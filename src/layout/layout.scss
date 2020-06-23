@@ -1,0 +1,58 @@
+body {
+  .layout {
+    position: relative;
+  }
+
+  footer{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    border: 1px solid black;
+  }
+
+
+  &.theme-dark{
+    background: darkgrey;
+  }
+
+  &.theme-light{
+    background: beige;
+  }
+
+
+  nav{
+    ul{
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+
+      li{
+        width: 150px;
+        a{
+          color: #555;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  .language-block{
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    width: 60px;
+
+    .btn{
+      width: 30px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+}
