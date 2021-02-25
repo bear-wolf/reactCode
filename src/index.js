@@ -1,51 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-import Header from "./layout/header/header";
-import Footer from "./layout/footer/footer";
+import { Switch, Route } from "react-router-dom";
+
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './index.scss';
-import './layout/layout.scss'
 
-import {I18nextProvider} from 'react-i18next';
-import i18next from 'i18next';
-import common_ua from "./translations/ua/common.json";
-import common_en from "./translations/en/common.json";
+import {BrowserRouter} from 'react-router-dom';
+import { SignIn } from "./pages/sign-in/sign-in";
+import { SignUp } from "./pages/sign-up/sign-up";
+import { RemindPassword } from "./pages/remind-password/remind-password";
+import { Test } from "./components/test/test";
+import {Localization} from "./utils/localization";
+import { LayOut } from "./pages/layout/layout";
 
-i18next.init({
-    interpolation: {escapeValue: false},  // React already does escaping
-    lng: 'en',                              // language to use
-    resources: {
-        en: {
-            common: common_en               // 'common' is our custom namespace
-        },
-        ua: {
-            common: common_ua
-        },
-    },
-});
-
+Localization.initI18();
 
 ReactDOM.render(
-    <I18nextProvider i18n={i18next}>
-        <div className='layout'>
-            <Header></Header>
-            <Footer></Footer>
-        </div>
-    </I18nextProvider>,
+    <BrowserRouter>
+        <Switch>
+            {/*<Route exact path="/sign-in" component={SignIn} />*/}
+            {/*<Route exact path="/sign-up" component={SignUp} />*/}
+            {/*<Route exact path="/remind-password" component={RemindPassword} />*/}
+            {/*<Route exact path="/test" component={Test} />*/}
+            <Route exact path="/" component={LayOut} />
+        </Switch>
+    </BrowserRouter>,
     document.getElementById('root')
 );
-
-
-// ReactDOM.render(
-//     <React.StrictMode>
-//         {/*<Layout/>*/}
-//         <div className='layout'>
-//             <Header></Header>
-//             <Footer></Footer>
-//         </div>
-//     </React.StrictMode>,
-//     document.getElementById('root')
-// );
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

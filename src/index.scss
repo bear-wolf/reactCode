@@ -1,5 +1,3 @@
-@import '~bootstrap/scss/bootstrap.scss';
-//import './custom.scss';
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -12,4 +10,37 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+
+.form-control-input-label {
+  display: flex;
+  width: 100%;
+}
+
+
+.sign-in-content{
+  .sub-link{
+    display: flex;
+    justify-content: space-between;
+    a{
+      color: black;
+    }
+  }
+}
+
+
+.error{
+  color: red!important;
+}
+
+form.submitted input.error{
+  border: 1px solid red!important;
+}
+form.submitted div.error{
+  display: flex!important;
+}
+form .error{
+  display: none;
 }

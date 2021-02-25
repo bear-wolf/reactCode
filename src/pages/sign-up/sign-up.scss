@@ -1,0 +1,72 @@
+.sign-up-content{
+  max-width: 800px;
+  margin: 0 auto;
+
+  h1{
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .ui-steps{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+
+    &:before{
+      left: 90px;
+      width: 200px;
+    }
+
+    ul{
+      li{
+        width: 200px;
+      }
+    }
+  }
+
+  .title{
+    margin: 0;
+    padding: 15px 0;
+    font-size: 22px;
+    color: black;
+    text-align: center;
+  }
+
+  .form-control-input-label{
+    color: black!important;
+  }
+
+  .sub-link{
+    display: flex;
+    justify-content: space-between;
+    a{
+      color: black;
+    }
+  }
+
+  .btn-entry{
+    width: 100%;
+    text-align: center;
+    max-width: 200px;
+    margin: 15px auto;
+  }
+
+  .step1-content{
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .step2-content{
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .content-body{
+    width: 100%;
+    opacity: 0.93;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+  }
+}

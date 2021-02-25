@@ -1,0 +1,12 @@
+{
+  "authHeader": "Авторизація",
+  "authSignUpHeader": "Реєстрація",
+  "formTitleEmail": "Пошта",
+  "formTitlePassword": "Пароль",
+  "buttonEntry": "Увійти",
+  "linkAuth": "Авторизуватись",
+  "authSignUpLink": "Зареєструватись",
+  "authRemindPasswordLink": "Відновити пароль",
+  "remindPasswordTitle": "Відновлення пароля",
+  "buttonSend": "Відправити"
+}
